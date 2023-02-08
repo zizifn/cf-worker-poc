@@ -1,3 +1,8 @@
 name = "wroker-poc" # todo
 main = "./index.js"
 compatibility_date = "2023-02-08"
+compatibility_flags = [
+  "transformstream_enable_standard_constructor",
+  "streams_enable_constructors",
+  "tcp_sockets_support"
+]
