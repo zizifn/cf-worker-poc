@@ -17,3 +17,5 @@ $ pnpm create cloudflare my-project worker
 ```
 
 > **Note:** Each command invokes [`create-cloudflare`](https://www.npmjs.com/package/create-cloudflare) for project creation.
+
+xxx
