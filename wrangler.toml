@@ -2,5 +2,5 @@ name = "wroker-poc" # todo
 main = "./index.js"
 compatibility_date = "2023-02-24"
 compatibility_flags = [
-  "tcp_sockets_support"
+  "tcp_sockets_support", "experimental"
 ]
