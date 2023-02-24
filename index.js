@@ -4,7 +4,7 @@ export default {
 		if (connect) {
 			result = `${result}  + has connect method`;
 		}
-		return new Response('Hello worker!!', {
+		return new Response(result, {
 			headers: {
 				'content-type': 'text/plain',
 			},
