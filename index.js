@@ -20,7 +20,7 @@ export default {
 						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}\r\n`));
 					},
 				})
-			) || 'default';
+			) || 'default get method';
 		return new Response(transformStream, {
 			headers: {
 				'content-type': 'text/plain'
