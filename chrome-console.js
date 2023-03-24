@@ -15,7 +15,7 @@
       },
     }).pipeThrough(new TextEncoderStream());
 
-    const url = "https://wroker-poc.zizifn.workers.dev/";
+    const url = "https://******.workers.dev/";
 
     const resp = await fetch(url, {
       method: "POST",

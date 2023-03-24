@@ -1,7 +1,7 @@
 # streaming request in worker?
 
 ## worker code
-index.js
+`index.js`
 
 ## nodejs client code
 `nodejs-client-test.mjs` is for testing worker code
