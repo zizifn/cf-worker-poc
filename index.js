@@ -15,6 +15,8 @@ export default {
 				new TransformStream({
 					transform(chunk, controller) {
 						console.log(`chunk: ${chunk}`);
+						// this will check how many reuqest chunk coming to worker....
+						// if worker is support streaming request, this will same as client chunk
 						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}\r\n`));
 					},
 				})
