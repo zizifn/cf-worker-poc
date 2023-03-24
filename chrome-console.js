@@ -29,11 +29,11 @@
 
     const reader = resp.body.getReader();
     while(true){
-        const {done, value} = reader.read()
+        const {done, value} = await reader.read()
         if(done){
             break;
         }
-        console.log(value)
+        console.log(new TextDecoder().decode(value))
     }
   } catch (err) {
     console.log(err);
