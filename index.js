@@ -1,18 +1,28 @@
 export default {
 	async fetch(request) {
+		if (request.method === "OPTIONS") {
+			return new Response('', {
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+					"Access-Control-Max-Age": "86400",
+				 },
+			});
+		}
 		let count = 0;
-		console.log('test11', Date.now());
 		const transformStream =
 			request.body?.pipeThrough(new TextDecoderStream()).pipeThrough(
 				new TransformStream({
 					transform(chunk, controller) {
-						console.log('test', Date.now());
-						controller.enqueue(new TextEncoder().encode(`${chunk} + ${count++}  ${new Date()}`));
+						console.log(`${chunk} + ${count++}  ${new Date()}`);
+						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}}`));
 					},
 				})
 			) || 'default';
 		return new Response(transformStream, {
-			headers: { 'content-type': 'text/plain' },
+			headers: {
+				'content-type': 'text/plain'
+			 },
 		});
 	},
 };
