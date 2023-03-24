@@ -14,8 +14,8 @@ export default {
 			request.body?.pipeThrough(new TextDecoderStream()).pipeThrough(
 				new TransformStream({
 					transform(chunk, controller) {
-						console.log(`${chunk} + ${count++}  ${new Date()}`);
-						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}}`));
+						console.log(`chunk: ${chunk}`);
+						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}`));
 					},
 				})
 			) || 'default';
