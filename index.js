@@ -15,7 +15,7 @@ export default {
 				new TransformStream({
 					transform(chunk, controller) {
 						console.log(`chunk: ${chunk}`);
-						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}`));
+						controller.enqueue(new TextEncoder().encode(`${chunk}-----server count --------${count++}\r\n`));
 					},
 				})
 			) || 'default';
