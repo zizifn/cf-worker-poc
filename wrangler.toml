@@ -1,5 +1,6 @@
 name = "wroker-poc" # todo
 # main = "./index.js"
-main = "./socket.js"
+main = "./nodejs.js"
 compatibility_date = "2023-05-13"
+compatibility_flags = ["nodejs_compat"]
 #compatibility_flags = ["tcp_sockets_support"]

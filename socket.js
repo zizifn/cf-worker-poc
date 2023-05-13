@@ -2,6 +2,7 @@ import { connect } from 'cloudflare:sockets';
 
 export default {
     async fetch(req, env) {
+        console.log('start fetch');
         const socket = connect({
             hostname: 'neverssl.com',
             port: 80
