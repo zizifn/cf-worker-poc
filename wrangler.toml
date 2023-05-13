@@ -1,3 +1,4 @@
 name = "wroker-poc" # todo
-main = "./index.js"
-compatibility_date = "2023-03-24"
+# main = "./index.js"
+main = "./socket.js"
+compatibility_date = "2023-05-13"
